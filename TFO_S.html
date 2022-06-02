@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=UTF-8"/>
+</head>
+
+
+<body bgcolor="black" style="color:white" >
+
+<div id="single-timeline" style="text-align: center">
+</div>
+
+<script>
+
+function getUname()
+{
+    var pageURL = window.location.search.substring(1); //  (1) -> to remove the first char which is "?" //
+	var URLVariables = pageURL.split('&');	// split into "key=value" array , by the & character 
+    for (var i = 0; i < URLVariables.length; i++) 
+    {
+        var ParameterName = URLVariables[i].split('='); // "key"="value" pairs , key is 0 , value is 1
+        if (ParameterName[0] == "uname") 
+        {
+            return ParameterName[1];
+        }
+    }
+}
+
+var timelineHREF = "https://twitter.com/" + getUname()  + "?ref_src=twsrc%5Etfw";
+var timelineAttrs = " data-chrome=\"nofooter noscrollbar transparent\" data-width=\"600\" data-height=\"1800\" data-theme=\"dark\" ";
+document.getElementById("single-timeline").innerHTML = "<a class=\"twitter-timeline\" href=\"" + timelineHREF + "\""+timelineAttrs+"></a>"
+
+</script>
+
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</body>
+
+</html>
