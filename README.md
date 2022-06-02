@@ -22,7 +22,7 @@ and tab-menu organization is mainly from the code found in:  [w3schools](https:/
 
 clone repo and simply open <b>TFO.html</b> and browse as you wish
 
-once opened it can be added to a bookmark in your browser for fast access 
+once opened it can be added as a bookmark in your browser for fast access 
 
 to add/remove tabs and user-accounts (twitter timelines) edit the file <b>TFO_Data.js</b> as described in the file itself
 
